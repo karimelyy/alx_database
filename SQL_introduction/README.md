@@ -1,0 +1,1 @@
+I'm jumping now for the first time into an introduction to SQL as an ALX student.
