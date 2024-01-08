@@ -1,3 +1,6 @@
+-- Drop table force_name if it exists
+DROP TABLE IF EXISTS force_name;
+
 -- Create table force_name if not exists
 CREATE TABLE IF NOT EXISTS force_name (
     id INT,
