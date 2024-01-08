@@ -14,6 +14,3 @@ INSERT INTO force_name (name) VALUES
     ('Holberton'),
     ('School'),
     ('C is fun');
-
--- Query to display the data
-SELECT * FROM force_name;
