@@ -8,4 +8,9 @@ CREATE TABLE IF NOT EXISTS force_name (
 );
 
 -- Insert a record into force_name
-INSERT INTO force_name (id, name) VALUES (89, 'Holberton School');
+INSERT INTO force_name (name) VALUES
+    ('Holberton School'),
+    ('Python is cool'),
+    ('Holberton'),
+    ('School'),
+    ('C is fun');
