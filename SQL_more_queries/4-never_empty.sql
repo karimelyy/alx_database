@@ -17,6 +17,3 @@ INSERT INTO id_not_null (name) VALUES
 
 -- Attempt to insert without specifying id
 INSERT INTO id_not_null (name) VALUES ('Another record');
-
--- Query to display the data
-SELECT * FROM id_not_null;
