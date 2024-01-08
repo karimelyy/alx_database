@@ -10,6 +10,8 @@ echo "CREATE USER IF NOT EXISTS 'user_0d_2'@'localhost';" | mysql -hlocalhost -u
 # Grant all privileges to user_0d_2
 echo "GRANT ALL PRIVILEGES ON *.* TO 'user_0d_2'@'localhost';" | mysql -hlocalhost -uroot -p
 
-# Display privileges for both users
+# Display privileges for user_0d_1
 echo "SHOW GRANTS FOR 'user_0d_1'@'localhost';" | mysql -hlocalhost -uroot -p
+
+# Display privileges for user_0d_2
 echo "SHOW GRANTS FOR 'user_0d_2'@'localhost';" | mysql -hlocalhost -uroot -p
