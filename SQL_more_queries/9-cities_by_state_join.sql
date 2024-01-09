@@ -15,7 +15,7 @@ INSERT INTO states (name) VALUES
     ('California'),
     ('Arizona'),
     ('Texas'),
-    ('Utah');
+    ('Nevada');
 
 -- Create the 'cities' table with a foreign key reference to 'states'
 CREATE TABLE IF NOT EXISTS cities (
@@ -37,7 +37,7 @@ INSERT INTO cities (state_id, name) VALUES
     (4, 'Las Vegas');
 
 -- Display cities with state names using a single SELECT statement
-SELECT cities.id, cities.name, states.name
-FROM cities, states
+SELECT cities.id, cities.name, states.name AS state_name
+FROM cities
 JOIN states ON cities.state_id = states.id
 ORDER BY cities.id;
