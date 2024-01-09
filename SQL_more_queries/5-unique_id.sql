@@ -1,11 +1,11 @@
--- Create table unique_id if not exists
-CREATE TABLE IF NOT EXISTS unique_id (
+-- Attempt to create table unique_id
+CREATE TABLE unique_id (
     id INT DEFAULT 1 UNIQUE,
     name VARCHAR(256)
 );
 
--- Insert records into unique_id
-INSERT INTO unique_id (name) VALUES
+-- Ignore the error if the table already exists
+INSERT IGNORE INTO unique_id (name) VALUES
     ('Holberton School');
 
 -- Attempt to insert a record with a duplicate id
