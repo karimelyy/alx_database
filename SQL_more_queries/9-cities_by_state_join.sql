@@ -40,4 +40,5 @@ INSERT INTO cities (state_id, name) VALUES
 SELECT cities.id, cities.name, states.name AS state_name
 FROM cities
 JOIN states ON cities.state_id = states.id
+WHERE states.name = 'California'
 ORDER BY cities.id;
