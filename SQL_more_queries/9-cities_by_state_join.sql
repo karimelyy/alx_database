@@ -28,11 +28,13 @@ CREATE TABLE IF NOT EXISTS cities (
 -- Insert some data into the 'cities' table for testing
 INSERT INTO cities (state_id, name) VALUES
     (1, 'San Francisco'),
+    (1, 'San Diego'),
     (1, 'San Jose'),
     (2, 'Page'),
-    (3, 'Paris'),
+    (2, 'Phoenix'),
     (3, 'Houston'),
-    (3, 'Dallas');
+    (3, 'Dallas'),
+    (4, 'Las Vegas');
 
 -- Display cities with state names using a single SELECT statement
 SELECT cities.id, cities.name, states.name
