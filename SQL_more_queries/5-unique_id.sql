@@ -13,13 +13,3 @@ INSERT INTO unique_id (name) VALUES
 
 -- Insert another record without specifying id
 INSERT INTO unique_id (name) VALUES ('Another record');
-
--- Attempt to insert a record with a duplicate id
--- This will fail silently due to the constraint, and no error will be displayed
-INSERT INTO unique_id (id, name) VALUES
-    (1, 'Holberton');
-
--- Insert more records to demonstrate regular inserts
-INSERT INTO unique_id (name) VALUES
-    ('Some Record 1'),
-    ('Some Record 2');
