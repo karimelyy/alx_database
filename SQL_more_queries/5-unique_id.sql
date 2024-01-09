@@ -1,4 +1,4 @@
--- Create table unique_id if not exists
+-- Attempt to create table unique_id if not exists
 CREATE TABLE IF NOT EXISTS unique_id (
     id INT DEFAULT 1 UNIQUE,
     name VARCHAR(256)
@@ -7,15 +7,13 @@ CREATE TABLE IF NOT EXISTS unique_id (
 -- Attempt to insert a record with a duplicate id
 -- This will fail silently due to the unique constraint, and no error will be displayed
 INSERT INTO unique_id (id, name) VALUES
-    (1, 'Holberton')
+    (89, 'Holberton School')
     ON DUPLICATE KEY UPDATE id = VALUES(id);
 
--- Drop the original table (if it exists)
-DROP TABLE IF EXISTS unique_id;
+-- Attempt to insert a record with a duplicate id
+-- This should display an error message due to the unique constraint
+INSERT INTO unique_id (id, name) VALUES
+    (89, 'Holberton');
 
--- Attempt to create a non-existing table (used for demonstration purposes)
-CREATE TABLE IF NOT EXISTS non_existing_table;
-
--- Attempt to rename the non-existing table to the original table name
--- This simulates renaming without using SELECT statements
-ALTER TABLE IF EXISTS non_existing_table RENAME TO unique_id;
+-- Uncomment the following line to display the contents of the unique_id table
+-- SELECT * FROM unique_id;
