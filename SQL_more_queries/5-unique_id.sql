@@ -10,6 +10,3 @@ CREATE TABLE unique_id (
 -- Insert records into unique_id
 INSERT INTO unique_id (name) VALUES
     ('Holberton School');
-
--- Insert another record without specifying id
-INSERT INTO unique_id (name) VALUES ('Another record');
