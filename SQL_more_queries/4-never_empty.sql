@@ -14,3 +14,6 @@ INSERT INTO id_not_null (name) VALUES
     ('Holberton'),
     ('School'),
     ('C is fun');
+
+-- Insert another record without specifying id
+INSERT INTO id_not_null (name) VALUES ('Another record');
