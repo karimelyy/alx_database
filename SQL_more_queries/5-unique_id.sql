@@ -13,8 +13,9 @@ INSERT INTO unique_id (id, name) VALUES
 -- Drop the original table (if it exists)
 DROP TABLE IF EXISTS unique_id;
 
--- Rename a non-existing table to the original table name
-CREATE TABLE non_existing_table;
+-- Attempt to create a non-existing table (used for demonstration purposes)
+CREATE TABLE IF NOT EXISTS non_existing_table;
 
--- Rename the non-existing table to the original table name
-ALTER TABLE non_existing_table RENAME TO unique_id;
+-- Attempt to rename the non-existing table to the original table name
+-- This simulates renaming without using SELECT statements
+ALTER TABLE IF EXISTS non_existing_table RENAME TO unique_id;
