@@ -4,7 +4,20 @@ CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
 -- Use the hbtn_0d_usa database
 USE hbtn_0d_usa;
 
--- Create the 'cities' table
+-- Create the 'states' table
+CREATE TABLE IF NOT EXISTS states (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(256) NOT NULL
+);
+
+-- Insert data into the 'states' table
+INSERT INTO states (name) VALUES
+    ('California'),
+    ('Arizona'),
+    ('Texas'),
+    ('Utah');
+
+-- Create the 'cities' table with a foreign key reference to 'states'
 CREATE TABLE IF NOT EXISTS cities (
     id INT AUTO_INCREMENT PRIMARY KEY,
     state_id INT NOT NULL,
