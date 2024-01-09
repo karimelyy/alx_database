@@ -10,11 +10,11 @@ INSERT INTO unique_id (id, name) VALUES
     (1, 'Holberton')
     ON DUPLICATE KEY UPDATE id = VALUES(id);
 
--- Use a placeholder table to display the data
-CREATE TABLE display_data AS SELECT * FROM unique_id WHERE id = 1;
+-- Drop the original table (if it exists)
+DROP TABLE IF EXISTS unique_id;
 
--- Drop the original table
-DROP TABLE unique_id;
+-- Rename a non-existing table to the original table name
+CREATE TABLE non_existing_table;
 
--- Rename the placeholder table to the original table name
-ALTER TABLE display_data RENAME TO unique_id;
+-- Rename the non-existing table to the original table name
+ALTER TABLE non_existing_table RENAME TO unique_id;
